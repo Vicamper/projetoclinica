@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Relatórios - Clínica Nuvem</title>
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="home.html">Início</a></li>
+      <li><a href="consultas.php">Consultas</a></li>
+      <li><a href="relatorios.html">Relatórios</a></li>
+      <li><a href="cadastro.html">Cadastros</a></li>
+      <li><a href="pacientes.php">Pacientes</a></li>
+      <li><a href="logout.php">Sair</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <h1>Geração de Relatórios</h1>
+
+    <form class="form-cadastro" action="gerar_relatorio.php" method="POST">
+
+   
+      <label for="convenio">Escolha o Convênio:</label>
+      <select id="convenio" name="convenio" required>
+        <option value="">Selecione</option>
+        <option value="convenio01">Convênio 01</option>
+        <option value="convenio02">Convênio 02</option>
+        <option value="convenio03">Convênio 03</option>
+      </select>
+
+      
+      <label for="medico">Nome do Médico:</label>
+      <input type="text" id="medico" name="medico" placeholder="Digite o nome do médico" required />
+
+      <label for="periodo_inicio">Data de Início:</label>
+      <input type="date" id="periodo_inicio" name="periodo_inicio" required />
+
+      <label for="periodo_fim">Data de Fim:</label>
+      <input type="date" id="periodo_fim" name="periodo_fim" required />
+
+      
+      <label for="pagamento">Forma de Pagamento:</label>
+      <select id="pagamento" name="pagamento" required>
+        <option value="">Selecione</option>
+        <option value="dinheiro">Dinheiro</option>
+        <option value="pix">Pix</option>
+        <option value="debito">Débito</option>
+        <option value="credito">Crédito</option>
+      </select>
+
+      <button type="submit">Gerar Relatório</button>
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro de Funcionários - Clínica Nuvem</title>
+  <link rel="stylesheet" href="home.css" />
+  
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Menu</h2>
+   <ul>
+      <li><a href="home.html">Início</a></li>
+      <li><a href="consultas.php">Consultas</a></li>
+      <li><a href="relatorios.html">Relatórios</a></li>
+      <li><a href="cadastro.html">Cadastros</a></li>
+      <li><a href="pacientes.php">Pacientes</a></li> 
+      <li><a href="logout.php">Sair</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <h1>Cadastro de Funcionários</h1>
+
+    <form class="form-cadastro" action="conexao_cadastro.php" method="POST">
+      <label for="tipo">Tipo de Funcionário:</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">Selecione</option>
+        <option value="funcionario">Funcionário</option>
+        <option value="medico">Médico</option>
+        <option value="administrador">Administrador</option>
+      </select>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required />
+
+      <label for="nascimento">Data de Nascimento:</label>
+      <input type="date" id="nascimento" name="nascimento" required />
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required />
+
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+
+</body>
+</html>
